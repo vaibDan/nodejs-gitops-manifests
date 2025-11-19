@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: vaibdan/nodejs-gitops-app:ea7aecb6c64312c07928210c936be277a1049922
+        image: vaibdan/nodejs-gitops-app:7380998b1a2aab11ed3609be5ebc70adc9f371c9
         ports:
         - containerPort: 8080
