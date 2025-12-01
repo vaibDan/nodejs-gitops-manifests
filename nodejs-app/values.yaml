@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   repository: vaibdan/nodejs-gitops-app
   pullPolicy: IfNotPresent
-  tag: "4f61d52e867073b29a677953a94ef01a44733097"
+  tag: "2881af4673e82e8b0667bc455274c31daaff4b17"
   port: 8080
 service:
   type: NodePort
