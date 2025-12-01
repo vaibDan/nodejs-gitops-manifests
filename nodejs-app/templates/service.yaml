@@ -7,6 +7,6 @@ spec:
     app: nodejs-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
-  type: NodePort 
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.image.port }}
+  type: {{ .Values.service.type }}

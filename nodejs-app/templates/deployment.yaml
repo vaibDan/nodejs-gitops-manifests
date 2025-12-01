@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nodejs-app-deployment
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount}}
   selector:
     matchLabels:
       app: nodejs-app
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: vaibdan/nodejs-gitops-app:5fd6270886094de290889c0f9ce4a800c6f01f8e
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.image.port }}

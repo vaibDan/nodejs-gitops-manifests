@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository:  vaibdan/nodejs-gitops-app
+  pullPolicy: IfNotPresent
+  tag: "initial"
+  port: 8080
+
+
+service:
+  type: NodePort
+  port: 80
